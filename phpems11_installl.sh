@@ -160,6 +160,10 @@ if [ ! -d "/data/phpems11" ]; then
 fi
 success "仓库克隆完成"
 
+# 赋予权限
+chmod -R 777 /data/phpems11
+success "已赋予 /data/phpems11 目录 777 权限"
+
 CONFIG_FILE="/data/phpems11/lib/config.inc.php"
 if [ -f "$CONFIG_FILE" ]; then
     sed -i "s/define('DH','127.0.0.1')/define('DH','phpems_mysql')/" "$CONFIG_FILE"
