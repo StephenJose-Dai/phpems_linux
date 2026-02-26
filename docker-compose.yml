@@ -1,6 +1,6 @@
 services:
   mysql:
-    image: mysql:8.4
+    image: stephenjose/phpems_mysql:8.4
     container_name: phpems_mysql
     restart: always
     environment:
@@ -14,7 +14,7 @@ services:
       - phpems
 
   php:
-    image: php:7.4
+    image: stephenjose/phpems_php:7.4
     container_name: phpems_php
     restart: always
     environment:
@@ -25,7 +25,7 @@ services:
       - phpems
 
   nginx:
-    image: nginx:zwyk
+    image: stephenjose/phpems_nginx:1.29.5
     container_name: phpems_nginx
     restart: always
     environment:
