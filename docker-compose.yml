@@ -1,0 +1,46 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: phpems_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Zdr5NSqnyjAPwNvL
+      MYSQL_DATABASE: phpems11
+      TZ: "Asia/Shanghai"
+    volumes:
+      - /data/mysql:/var/lib/mysql
+      - /data/phpems11/phpems11.sql:/docker-entrypoint-initdb.d/phpems11.sql:ro
+    networks:
+      - phpems
+
+  php:
+    image: php:7.4
+    container_name: phpems_php
+    restart: always
+    environment:
+      TZ: "Asia/Shanghai"
+    volumes:
+      - /data/phpems11:/var/www/html
+    networks:
+      - phpems
+
+  nginx:
+    image: nginx:zwyk
+    container_name: phpems_nginx
+    restart: always
+    environment:
+      TZ: "Asia/Shanghai"
+    ports:
+      - "80:80"
+    volumes:
+      - /data/phpems11:/var/www/html
+      - /data/nginx/logs:/var/log/nginx
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - phpems
+
+networks:
+  phpems:
+    driver: bridge
