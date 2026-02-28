@@ -9,7 +9,7 @@
 
 
 
-### 一、在线安装
+# 一、在线安装
 #### 1、到 https://github.com/StephenJose-Dai/phpems_linux/releases 下载最新的 ```phpems11_installl.sh``` 文件
 
 ##### 2、给脚本赋权并执行
@@ -23,7 +23,7 @@ chmod +x phpems11_installl.sh
 #### 3、安装完毕后，窗口会显示访问地址、用户名密码等信息，该信息仅显示一次，记得妥善保存。
 
 
-### 二、离线安装
+# 二、离线安装
 
 #### 1、到 https://github.com/StephenJose-Dai/phpems_linux/releases 下载最新的 ```phpems11_installl.sh``` 、 ```docker-compose.yml``` 和 ```phpems_linux_11.tar.gz```
 
@@ -44,7 +44,7 @@ chmod +x phpems11_installl.sh
 #### 4、安装完毕后，窗口会显示访问地址、用户名密码等信息，该信息仅显示一次，记得妥善保存。
 
 
-# 支援
+# 三、支援
 如果有部署问题或者其他问题，可以联系作者支援  
 
 ![戴戴的Linux](qrcode.jpg)  ![phpems技术交流群](qqqrc.jpg)  
