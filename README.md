@@ -1,3 +1,14 @@
+在部署phpems之前，你需要先安装docker和docker compose，各类操作系统如何安装docker请参考官方文档 https://docs.docker.com/engine/install/
+
+<img width="2623" height="1331" alt="QQ_1772262235174" src="https://github.com/user-attachments/assets/53f4b589-0c05-48a7-99cd-4d9deb300b66" />
+
+按照官方文档来安装docker的话，通常docker compose都会一并安装掉
+docker安装完成后再来执行下列操作
+
+目前支持在线和离线来部署phpems docker版，请根据具体情况和需求来选择
+
+
+
 ### 一、在线安装
 #### 1、到 https://github.com/StephenJose-Dai/phpems_linux/releases 下载最新的 ```phpems11_installl.sh``` 文件
 
