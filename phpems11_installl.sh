@@ -185,15 +185,15 @@ choose_image_source() {
     while true; do
         echo ""
         echo "请选择镜像来源："
-        echo "  1) 在线拉取镜像（需要 VPN）"
+        echo "  1) 在线拉取镜像（需要配置代理）"
         echo "  2) 本地导入镜像"
         echo ""
         read -rp "请输入选项 [1/2]：" SOURCE_CHOICE
 
         case "$SOURCE_CHOICE" in
             1)
-                warn "【注意】在线拉取镜像需要配置 VPN，否则可能出现拉取失败的情况。"
-                warn "VPN 配置文档请参考：https://mp.weixin.qq.com/s/LXal8PCCYHRPtFDxVmkOYw"
+                warn "【注意】在线拉取镜像需要配置代理，否则可能出现拉取失败的情况。"
+                warn "代理配置文档请参考：https://mp.weixin.qq.com/s/LXal8PCCYHRPtFDxVmkOYw"
                 echo ""
                 read -rp "确认使用在线拉取方式？[y/N]：" CONFIRM
                 case "$CONFIRM" in
